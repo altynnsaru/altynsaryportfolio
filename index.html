@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вход в систему — Login Lab</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Вход в систему</h1>
+
+        <div id="errorBox" class="alert alert-error" style="display:none;"></div>
+
+        <div id="loggedInBox" style="display:none;">
+            <p>Вы уже вошли как <b id="loggedInName"></b>.</p>
+            <a class="btn" href="dashboard.html">Перейти в профиль</a>
+        </div>
+
+        <form id="loginForm" novalidate>
+            <div class="field">
+                <label for="username">Логин</label>
+                <input type="text" id="username" name="username" placeholder="от 3 до 20 символов" required>
+            </div>
+            <div class="field">
+                <label for="password">Пароль</label>
+                <input type="password" id="password" name="password" placeholder="минимум 6 символов" required>
+            </div>
+            <div class="field field-checkbox">
+                <label>
+                    <input type="checkbox" id="remember" name="remember"> Запомнить меня (7 дней)
+                </label>
+            </div>
+            <button type="submit" class="btn">Войти</button>
+        </form>
+        <p class="hint">Тестовые данные: <b>admin</b> / <b>admin123</b></p>
+    </div>
+
+    <script src="script.js"></script>
+    <script>initLoginPage();</script>
+</body>
+</html>
